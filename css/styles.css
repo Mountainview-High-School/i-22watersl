@@ -8,32 +8,49 @@ html {
     animation-name: gradientTransition;
     animation-duration: 40s;
     animation-iteration-count: infinite;  
-    background-image: linear-gradient(to bottom, green, #ff000000);
-    height: 100vh;
+    background-image: linear-gradient(to bottom, rgb(255, 119, 119), #ff000000);
+    min-height: 100vh;
 }
 
 body {
     display: flex;
     flex-direction: column;
     * {
-        border-radius: 3vw;
+        border-radius: 2vw;
         text-align: center;
+        margin: 1vw 0px;
     }
 }
 
 header {
     background: url("/images/skull.jpg") center;
     background-size: cover;
-    color: red;
-    font: 5vw Georgia;
+    color: rgb(255, 101, 101);
+    font: 5vh Georgia;
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        li{
+            background-image: radial-gradient(#000000ff, #00000000);
+            border-color: rgb(255, 101, 101);
+            padding: 1vw 3vw;
+            font-size: 3vh;
+            font-weight: bold;
+            border-width: 0.3vw;
+            border-style: outset;
+        }
+    }
 }
 
 section {
-    color: green;
+    color: rgb(255, 101, 101);
     text-align: center;
     background: url("/images/gold.jpg") center;
-    text-shadow: 2px 2px black;
+    text-shadow: 1px 1px black;
     background-size: cover;
-    font: 2vw Georgia;
+    font: 2vh Georgia;
     padding: 3vw;
 }
