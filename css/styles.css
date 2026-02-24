@@ -1,13 +1,21 @@
 @keyframes gradientTransition {
-    0% {background-color: green;}
-    50% {background-color: yellow;}
-    100% {background-color: green;}
+    0% {
+        background-color: green;
+    }
+
+    50% {
+        background-color: yellow;
+    }
+
+    100% {
+        background-color: green;
+    }
 }
 
 html {
     animation-name: gradientTransition;
     animation-duration: 40s;
-    animation-iteration-count: infinite;  
+    animation-iteration-count: infinite;
     background-image: linear-gradient(to bottom, rgb(255, 119, 119), #ff000000);
     min-height: 100vh;
 }
@@ -15,8 +23,10 @@ html {
 body {
     display: flex;
     flex-direction: column;
+
     * {
-        border-radius: 2vw;
+        color: rgb(255, 101, 101);
+        border-radius: 1vw;
         text-align: center;
         margin: 1vw 0px;
     }
@@ -27,20 +37,34 @@ header {
     background-size: cover;
     color: rgb(255, 101, 101);
     font: 5vh Georgia;
-    ul {
-        list-style-type: none;
-        display: flex;
+
+    nav {
         flex-direction: row;
-        justify-content: center;
-        
-        li{
-            background-image: radial-gradient(#000000ff, #00000000);
-            border-color: rgb(255, 101, 101);
-            padding: 1vw 3vw;
-            font-size: 3vh;
-            font-weight: bold;
-            border-width: 0.3vw;
-            border-style: outset;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+
+    nav {
+        width: 30vw;
+        ul {
+            flex-direction: column;
+        }
+    }
+
+    article {
+        min-width: 70vw;
+
+        section {
+            color: rgb(255, 101, 101);
+            text-align: center;
+            background: url("/images/gold.jpg") center;
+            text-shadow: 1px 1px black;
+            background-size: cover;
+            font: 2vh Georgia;
+            padding: 3vw;
         }
     }
 }
@@ -53,4 +77,22 @@ section {
     background-size: cover;
     font: 2vh Georgia;
     padding: 3vw;
+}
+
+nav {
+    ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+
+        li {
+            background-image: radial-gradient(#000000ff, #00000000);
+            border-color: rgb(255, 101, 101);
+            padding: 1vw 3vw;
+            font-size: 3vh;
+            font-weight: bold;
+            border-width: 0.3vw;
+            border-style: outset;
+        }
+    }
 }
